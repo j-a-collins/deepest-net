@@ -1,7 +1,3 @@
-Hello and welcome to this blog. Edit the `index.md` file to change this content. All pages on the blog, including this one, use [Markdown](https://guides.github.com/features/mastering-markdown/). You can include images:
+Welcome to my obligatory online presence or whatever.
 
-![Image of fast.ai logo](images/logo.png)
-
-## This is a title
-
-And you can include links, like this [link to fast.ai](https://www.fast.ai). Posts will appear after this file. 
+This space will blog my interests and concerns related to Deep Learning. If you leave here with one thing to think about, let it be that the impending arrival of artificial superintelligence presents a significant and potentially existential challenge to humanity -- but we can be ready for it by asking greater challenges of ourselves _now_.
