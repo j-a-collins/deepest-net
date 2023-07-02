@@ -23,9 +23,9 @@ While RNNs present a powerful generative algorithm, they are limited by the amou
 
     "Sally, who moved to Spain in 2005 and loves the culture, the food, and the people, still struggles with the _______."
 
-The blank term could be filled with the word "language" to make the sentence meaningful. However, the particularly helpful information ("Sally" and "Spain") is quite far from the blank term, separated by a long sequence of words. RNNs, due to their sequential nature, can have difficulty maintaining liguistic context over long sequences due to the vanishing gradient problem, whereby the influence of the input information decreases over time and with distance in the sequence. As an example, using an RNN with keras, the suggested term was 'bureaucracy', an intriguing guess but not one that would immediately leap out to someone keeping in mind the entire text.
+The blank term could be filled with the word "language" to make the sentence meaningful. However, the particularly helpful information ("Sally" and "Spain") is quite far from the blank term, separated by a long sequence of words. RNNs, due to their sequential nature, can have difficulty maintaining linguistic context over long sequences due to the vanishing gradient problem, whereby the influence of the input information decreases over time and with distance in the sequence. As an example, using an RNN with Keras[^1] , the suggested term was 'bureaucracy', an intriguing guess but not one that would immediately leap out to someone keeping in mind the entire text.
 
-Since RNNs process sequences one element at a time, processing a sequence of length _n_ requires the RNN to perform _n+ steps of computation. The name recurrent, in fact, refers to the repeated performance of a task for every element in a sequence. The sequential nature of calculation in an RNN makes it difficult to parallelize; a common technique for speeding up computations, moreover, RNNs maintain a hidden state which is passed from each step in the sequence to the next. This state needs to be stored and updated at each step, greatly increasing memory usage over longer sequences. As you can see, as an implementation of an RNN is scaled in order to see more words in the text, the resources required by the model are significantly scaled - the computational and memory requirements grow exponentially as the window of text seen by the model is increased. 
+Since RNNs process sequences one element at a time, processing a sequence of length n requires the RNN to perform n steps of computation. The name recurrent, in fact, refers to the repeated performance of a task for every element in a sequence. The sequential nature of calculation in an RNN makes it difficult to parallelize; a common technique for speeding up computations, moreover, RNNs maintain a hidden state which is passed from each step in the sequence to the next. This state needs to be stored and updated at each step, greatly increasing memory usage over longer sequences. As you can see, as an implementation of an RNN is scaled in order to see more words in the text, the resources required by the model are significantly scaled - the computational and memory requirements grow exponentially as the window of text seen by the model is increased. 
 
 As you can see, to successfully predict the next word, models need to see more than just the previous few words or they reach results like 'bureaucracy'. It's important for models to gain an understanding of the whole sentence or even the entire text. The problem here is that language is extremely complex. For example, homonyms provide great difficulty to the RNN method. Let's consider the following:
 
@@ -103,7 +103,7 @@ Now that we have seen the end-to-end architecture of the Transformer, let's conc
 
     print(response.choices[0].text.strip())
 
-And we get the following completion:
+And we get:
 
 ## Conclusion
 
@@ -114,3 +114,6 @@ Transformers ingest sequences as a whole and assign weights to the tokens based 
 In a nutshell, the Transformer model takes in tokenized inputs, embeds them into a high-dimensional space, and applies positional encoding to maintain word order. Then, through the encoder and decoder layers, these vectors undergo self-attention, where they are weighted based on their contextual relevance. The multi-headed nature of this process allows different aspects of language to be learned concurrently and independently. The output is a vector of logits, transformed into a probability distribution for each token in the vocabulary. The most likely next word is then selected, with methods available to introduce variability in this choice.
 
 Understanding the fundamentals of Transformer architecture and the mechanisms behind it can be a vital step for those interested in delving deeper into the field of AI and machine learning, particularly in the area of language models. Its innovative approach has been revolutionary in dealing with sequence data and language processing, and it continues to be the backbone of many cutting-edge models today.
+
+
+[^1]: Keras is a popular deep learning framefork. For those unfamiliar: https://keras.io/.
