@@ -79,7 +79,7 @@ After the attention process, the weighted inputs are then processed through a fu
 
 **Softmax Output**: Finally, a softmax function is applied to the logits, normalizing them into a probability distribution over the models _entire vocabulary_. The token with the highest probability score is deemed the most likely next word. There are, however, various methods which can be used to make the final selection, allowing for a more nuanced prediction beyond simply picking the highest probable token.
 
-Now that we have seen the end-to-end architecture of the Transformer, let's conclude this post by using one, let's use GPT-4 to summarise the above:
+Now that we have seen the end-to-end architecture of the Transformer, let's conclude this post by using one, let's use GPT-3 to summarise the above:
 
     import openai
     import os
