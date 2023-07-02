@@ -103,7 +103,7 @@ Now that we have seen the end-to-end architecture of the Transformer, let's conc
 
     print(response.choices[0].text.strip())
 
-And we get:
+And we get the following conclusion from GPT-3:
 
 ## Conclusion
 
